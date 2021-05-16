@@ -1,12 +1,12 @@
 <%= @moodsaverage.round %>
 
-<% if @moodsaverage >= 1 && < 2 %>
+<% if @moodsaverage == 1 %>
   <p>hallo</p>
-<% elsif @moodsaverage >= 2 && < 3 %>  
+<% elsif @moodsaverage == 2 %>  
   <p>buhh</p>
-<% elsif @moodsaverage >= 3 && < 4 %> 
+<% elsif @moodsaverage == 3 %> 
   <p>right</p>
-<% elsif @moodsaverage >= 4 && < 5 %>
+<% elsif @moodsaverage == 4 %>
   <p>super</p>
 <% else %>
   <p>top</p>
