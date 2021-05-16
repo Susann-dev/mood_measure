@@ -2,6 +2,7 @@ class MoodsController < ApplicationController
 
   def index
     @moods = Mood.all
+    @moodsaverage = @moods.average(:rating)
   end
 
   def new
@@ -9,9 +10,9 @@ class MoodsController < ApplicationController
   end
 
   def create
-    @mood = Mood.new(mood_params)
+  @mood = Mood.new(mood_params)
     if @mood.save
-      redirect_to moods_path(@mood)
+       redirect_to moods_path(@mood)
     else
       render :new
     end

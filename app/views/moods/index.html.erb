@@ -1,7 +1,20 @@
-<ul>
-  <% @moods.each do |mood| %>
-    <li><%= mood.rating %></li>
-  <% end %>
-</ul>
+<%= @moodsaverage.round %>
 
+<% if @moodsaverage >= 1 && < 2 %>
+  <p>hallo</p>
+<% elsif @moodsaverage >= 2 && < 3 %>  
+  <p>buhh</p>
+<% elsif @moodsaverage >= 3 && < 4 %> 
+  <p>right</p>
+<% elsif @moodsaverage >= 4 && < 5 %>
+  <p>super</p>
+<% else %>
+  <p>top</p>
+<% end %>
+
+
+
+
+<br>
  <%= link_to "Add your mood!", new_mood_path(@mood), class: "main-btn", id: "new-btn" %>
+
