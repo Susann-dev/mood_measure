@@ -1,13 +1,20 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+.navbar-lewagon .navbar-collapse img {
+  width: 80px;
+  margin-left: 1135px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/concrete-texture.png");
+ }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
 }
 
+.navbar-lewagon #logo {
+  font-weight: bold;
+  color: #EC0759;
+}
