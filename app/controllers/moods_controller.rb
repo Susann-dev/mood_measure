@@ -1,12 +1,15 @@
 class MoodsController < ApplicationController
+  skip_before_action :verify_authenticity_token 
 
   def index
-    @moods = Mood.all
+    @moods = policy_scope(Mood)
     @moodsaverage = @moods.average(:rating)
   end
 
   def new
     @mood = Mood.new
+
+    authorize @mood
   end
 
   def create
@@ -16,6 +19,7 @@ class MoodsController < ApplicationController
     else
       render :new
     end
+    authorize @mood
   end
 
   def destroy
