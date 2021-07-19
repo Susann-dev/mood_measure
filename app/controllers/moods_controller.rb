@@ -30,7 +30,7 @@ class MoodsController < ApplicationController
   private
 
   def mood_params
-    params.require(:mood).permit(:rating)
+    params.require(:mood).permit(:rating, :rating2)
   end
 end
 
