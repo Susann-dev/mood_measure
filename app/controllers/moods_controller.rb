@@ -4,6 +4,8 @@ class MoodsController < ApplicationController
   def index
     @moods = policy_scope(Mood)
     @moodsaverage = @moods.average(:rating)
+    @moodsaverage2 = @moods.count(:rating3).round
+    @moodsaverage3 = @moods.average(:rating3).round
   end
 
   def new
@@ -30,7 +32,7 @@ class MoodsController < ApplicationController
   private
 
   def mood_params
-    params.require(:mood).permit(:rating, :rating2)
+    params.require(:mood).permit(:rating, :rating2, :rating3)
   end
 end
 

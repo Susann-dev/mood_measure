@@ -1,22 +1,21 @@
-<div class ="background">
-  <div class = "text">
-    <h1>Wie ist unsere Stimmung heute?</h1>
-    <br>
-    <% if @moodsaverage  >= 1 && @moodsaverage < 2 %>
-      <h1> Sehr schlecht</h1>
-    <% elsif @moodsaverage >= 2 && @moodsaverage < 3 %>
-      <h1> Schlecht</h1>
-    <% elsif @moodsaverage >= 3 && @moodsaverage < 4 %>
-      <h1> Mittel </h1>
-    <% elsif @moodsaverage >= 4 && @moodsaverage < 5 %>
-      <h1> Gut </h1>
-    <% elsif @moodsaverage >= 5 && @moodsaverage < 6 %>
-      <h1> Sehr gut </h1>
-    <% else %>
-      <h1> hier hat etwas nicht funktioniert</h1>
-    <% end %>
+<div class ="container">
+  <div class = "evaluation">
+  <div class ="text">
+  <p>Wie war deine letzten Woche?</p>
   </div>
-
+    <% if @moodsaverage  >= 1 && @moodsaverage < 2 %>
+      <h4> sehr schlecht</h4>
+    <% elsif @moodsaverage >= 2 && @moodsaverage < 3 %>
+      <h4> schlecht</h4>
+    <% elsif @moodsaverage >= 3 && @moodsaverage < 4 %>
+      <h4> mittel </h4>
+    <% elsif @moodsaverage >= 4 && @moodsaverage < 5 %>
+      <h4> gut </h4>
+    <% elsif @moodsaverage >= 5 && @moodsaverage < 6 %>
+      <h4> sehr gut </h4>
+    <% else %>
+      <h4> hier hat etwas nicht funktioniert</h1>
+    <% end %>
   <% if @moodsaverage  >= 1 && @moodsaverage < 2 %>
     <svg class="average" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <circle cx="256" cy="256" r="256" fill="#ffd93b"/>
@@ -46,7 +45,7 @@
             <ellipse transform="rotate(-135 182.1 246.7)" cx="182.1" cy="246.7" rx="10" ry="6.5" fill="#fff"/>
           </svg>
   <% elsif @moodsaverage >= 3 && @moodsaverage < 4 %> 
-      <svg class="average"" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <svg class="average" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <circle cx="256" cy="256" r="256" fill="#ffd93b"/>
       <path d="M407.7 352.8a163.9 163.9 0 0 1-303.5 0c-2.3-5.5 1.5-12 7.5-13.2a780.8 780.8 0 0 1 288.4 0c6 1.2 9.9 7.7 7.6 13.2z" fill="#3e4347"/>
       <path d="M512 256A256 256 0 0 1 56.7 416.7a256 256 0 0 0 360-360c58.1 47 95.3 118.8 95.3 199.3z" fill="#f4c534"/>
@@ -97,7 +96,27 @@
   <% else %>
   <h1>das hat nicht funktioniert</h1>
   <% end %>
+  <br>
+  <p>Hilft dir Dein Team dabei, deine Arbeit zu erledigen?</p>
+
+                <h4>ja <%= @moodsaverage2 %>x</h4>
+                <h4>nein <%= @moodsaverage2 %>x</h4>
+  <br>
+  <p>Wie hoch ist Dein aktuelles Streslevel?</p>
+	      <div class="progress">
+            <span class="title timer" data-from="0" data-to="100" data-speed="1800"><%=@moodsaverage3 
+            %></span>
+            <div class="overlay"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+    </div>
+  </div>  
 </div>
+
+
+
 
 
 
