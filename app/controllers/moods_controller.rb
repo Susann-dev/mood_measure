@@ -4,7 +4,8 @@ class MoodsController < ApplicationController
   def index
     @moods = policy_scope(Mood)
     @moodsaverage = @moods.average(:rating)
-    @moodsaverage2 = @moods.count(:rating3).round
+    @moodsyes = Mood.where(rating2: "1")
+    @moodsno = Mood.where(rating2: "2")
     @moodsaverage3 = @moods.average(:rating3).round
   end
 
