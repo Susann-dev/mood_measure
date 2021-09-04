@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_parameters
-    attributes = [:photo]
+    attributes = [:photo, :name]
     devise_parameter_sanitizer.permit(:sign_up, keys: attributes)
   end
 

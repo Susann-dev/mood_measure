@@ -6,4 +6,18 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-happy = Mood.create(rating: 1)
+
+Niklas = User.create(name: "Niklas", email: 'niklas@test.com', password: '123456')
+Niklas.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Niklas.png')), filename: 'Niklas.png', content_type: 'image/png')
+
+Philipp = User.create(name: "Philipp", email: 'philipp@test.com', password: '123456')
+Philipp.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Philipp.png')), filename: 'Philipp.png', content_type: 'image/png')
+
+Dennis = User.create(name: "Dennis", email: 'dennis@test.com', password: '123456')
+Dennis.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Dennis.png')), filename: 'Dennis.png', content_type: 'image/png')
+
+Susann = User.create(name: "Susann", email: 'susann@test.com', password: '123456')
+Susann.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Susann.png')), filename: 'Susann.png', content_type: 'image/png')
+
+Benni = User.create(name: "Benni", email: 'benni@test.com', password: '123456')
+Benni.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Benni.png')), filename: 'Benni.png', content_type: 'image/png')
