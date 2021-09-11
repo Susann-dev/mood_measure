@@ -1,5 +1,7 @@
-<h1>Hello</h1>
-<p><%= @current_user.first_name %> </p>
-
-
- <%= link_to "Gib deine hier deine Stimmung ab!", new_mood_path(@mood), class: "main-btn", id: "new-btn" %>
+<div class ="container">
+  <div class = "evaluation">
+    <h1>Hallo <%= current_user.first_name %>!</h1>
+    <br>
+    <%= link_to "Gib hier Deine Stimmung an!", new_mood_path(@mood), class: "main-btn", id: "new-btn" %>
+  </div>
+</div>
