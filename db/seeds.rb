@@ -7,16 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Niklas = User.create(first_name: "Niklas", email: 'niklas@test.com', password: '123456')
+Niklas = User.create(first_name: "Niklas", email: 'niklas@test.com', password: '123456', admin: true)
 Niklas.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Niklas.png')), filename: 'Niklas.png', content_type: 'image/png')
 
-Philipp = User.create(first_name: "Philipp", email: 'philipp@test.com', password: '123456')
+Philipp = User.create(first_name: "Philipp", email: 'philipp@test.com', password: '123456', admin: true)
 Philipp.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Philipp.png')), filename: 'Philipp.png', content_type: 'image/png')
 
-Dennis = User.create(first_name: "Dennis", email: 'dennis@test.com', password: '123456')
+Dennis = User.create(first_name: "Dennis", email: 'dennis@test.com', password: '123456', admin: true)
 Dennis.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Dennis.png')), filename: 'Dennis.png', content_type: 'image/png')
 
-Susann = User.create(first_name: "Susann", email: 'susann@test.com', password: '123456')
+Susann = User.create(first_name: "Susann", email: 'susann@test.com', password: '123456', admin: true)
 Susann.photo.attach(io: File.open(File.join(Rails.root, '/app/assets/images/Susann.png')), filename: 'Susann.png', content_type: 'image/png')
 
 Benni = User.create(first_name: "Benni", email: 'benni@test.com', password: '123456')

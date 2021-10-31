@@ -34,6 +34,10 @@ class ApplicationPolicy
     false
   end
 
+  def destroy_all?
+    false
+  end
+
   class Scope
     attr_reader :user, :scope
 

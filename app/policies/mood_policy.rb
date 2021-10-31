@@ -9,8 +9,20 @@ class MoodPolicy < ApplicationPolicy
     true
   end
 
+  def show?
+    true
+  end
+
   def create?
     true
+  end
+
+  def destroy?
+    true
+  end
+
+  def destroy_all?
+    user.admin = true
   end
 end
 

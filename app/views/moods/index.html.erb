@@ -1,6 +1,12 @@
 <div class ="container">
   <div class = "evaluation">
   <div class ="text">
+  <% if current_user && current_user.admin %>
+  <%= form_tag ({ :controller => 'moods', :action => 'destroy_all' }) do %>
+ <%= submit_tag 'destroy all'%>
+<% end %>
+  <% else %>
+  <% end %>
   <p>Wie war Deine letzten Woche?</p>
   </div>
     <% if @moodsaverage  >= 1 && @moodsaverage < 2 %>
@@ -104,7 +110,7 @@
                 <h4>ja <%= @moodsyes.count %>x</h4>
                 <h4>nein <%= @moodsno.count %>x</h4>
   <br>
-  <p>Wie hoch ist Dein aktuelles Streslevel?</p>
+  <p>Wie hoch ist Dein aktuelles Stresslevel?</p>
 	      <div class="progress">
             <span class="title timer" data-from="0" data-to="100" data-speed="1800"><%=@moodsaverage3 
             %></span>

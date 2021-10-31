@@ -8,7 +8,23 @@ class MoodsController < ApplicationController
     @moodsno = Mood.where(rating2: "2")
     @moodsaverage3 = @moods.average(:rating3).round
   end
+  
 
+  def destroy_all
+    @moods = Mood.all
+    @moods.each do |m|    
+        m.destroy      
+    end
+    redirect_to root_path, notice: "Deleted"
+    authorize @moods
+  end
+
+  
+  def destroy
+    @mood = Mood.find(params[:rating])
+    @mood.destroy_all
+  end
+  
   def new
     @mood = Mood.new
 
@@ -25,16 +41,10 @@ class MoodsController < ApplicationController
     authorize @mood
   end
 
-  def destroy
-    @mood = Mood.find(params[:id])
-    @mood.destroy
-  end
-
   private
 
   def mood_params
     params.require(:mood).permit(:rating, :rating2, :rating3)
   end
 end
-
 
