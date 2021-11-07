@@ -1,11 +1,13 @@
  
 <div class ="container">
+<div class ="delete">
 <% if current_user && current_user.admin %>
   <%= form_tag ({ :controller => 'moods', :action => 'destroy_all' }) do %>
  <%= submit_tag 'destroy all'%>
 <% end %>
   <% else %>
   <% end %>
+</div>
   <div class = "evaluation">
   <div class ="text">  
   <p>Wie war Deine letzten Woche?</p>
